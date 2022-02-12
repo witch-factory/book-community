@@ -38,10 +38,12 @@ const DropDownMenuContainer = styled.div`
 `;
 
 const DropDownMenuHeader = styled.div`
-  margin-bottom: 0.8rem;
+  margin: 1rem;
   font-weight: 500;
   font-size: 1.3rem;
   background: #ffffff;
+  height:1.8rem;
+  width:9rem;
   &:hover + ${DropDownMenuContainer}{
     display:block;
   }
@@ -79,20 +81,17 @@ const secondMenuDropDown = [
 ];
 
 function DropDownMenu({ menuName, dropDownItemList }) {
-  const [menuOpen, setMenuOpen] = useState(true);
   const [menuSelectedOption, setMenuSelectedOption] = useState(null);
 
-  const menuToggle = () => setMenuOpen(!menuOpen);
   const onOptionSelected = (value) => () => {
     setMenuSelectedOption(value);
-    setMenuOpen(false);
     // eslint-disable-next-line no-console
     console.log(menuSelectedOption);
   };
 
   return (
-    <>
-      <DropDownMenuHeader onClick={menuToggle}>{menuName}</DropDownMenuHeader>
+    <VerticalContainer>
+      <DropDownMenuHeader>{menuName}</DropDownMenuHeader>
       <DropDownMenuContainer>
         <DropDownMenuList>
           {dropDownItemList.map((item) => (
@@ -105,7 +104,7 @@ function DropDownMenu({ menuName, dropDownItemList }) {
           ))}
         </DropDownMenuList>
       </DropDownMenuContainer>
-    </>
+    </VerticalContainer>
   );
 }
 
