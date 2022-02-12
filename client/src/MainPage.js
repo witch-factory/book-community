@@ -1,6 +1,16 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+const HorizontalContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+const VerticalContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 const HeaderMainLogo = styled.h1`
   font-size:3rem;
   margin: 3px;
@@ -13,14 +23,15 @@ const HeaderSubLogo = styled.h2`
 
 function HeaderLogo() {
   return (
-    <>
+    <VerticalContainer>
       <HeaderMainLogo>Reviewary</HeaderMainLogo>
       <HeaderSubLogo>너와 나의 리뷰 도서관</HeaderSubLogo>
-    </>
+    </VerticalContainer>
   );
 }
 
 const DropDownMenuContainer = styled.div`
+  display: none;
   color:#000000;
   width:10rem;
   margin: 0 auto;
@@ -31,9 +42,10 @@ const DropDownMenuHeader = styled.div`
   font-weight: 500;
   font-size: 1.3rem;
   background: #ffffff;
+  &:hover + ${DropDownMenuContainer}{
+    display:block;
+  }
 `;
-
-const DropDownMenuListContainer = styled.div``;
 
 const DropDownMenuList = styled.ul`
   padding: 0;
@@ -60,38 +72,56 @@ const firstMenuDropDown = [
   '장르별게시판',
 ];
 
-function MainPage() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(null);
-  const menuToggle = () => setIsOpen(!isOpen);
+const secondMenuDropDown = [
+  '자유게시판',
+  '리뷰게시판',
+  '장르별게시판',
+];
+
+function DropDownMenu({ menuName, dropDownItemList }) {
+  const [menuOpen, setMenuOpen] = useState(true);
+  const [menuSelectedOption, setMenuSelectedOption] = useState(null);
+
+  const menuToggle = () => setMenuOpen(!menuOpen);
   const onOptionSelected = (value) => () => {
-    setSelectedOption(value);
-    setIsOpen(false);
+    setMenuSelectedOption(value);
+    setMenuOpen(false);
     // eslint-disable-next-line no-console
-    console.log(selectedOption);
+    console.log(menuSelectedOption);
   };
 
   return (
     <>
-      <HeaderLogo />
-      <DropDownMenuListContainer>
-        <DropDownMenuHeader onClick={menuToggle}>전체글</DropDownMenuHeader>
-        {isOpen && (
-          <DropDownMenuContainer>
-            <DropDownMenuList>
-              {firstMenuDropDown.map((item) => (
-                <DropDownListItem
-                  onClick={onOptionSelected(item)}
-                  key={item}
-                >
-                  {item}
-                </DropDownListItem>
-              ))}
-            </DropDownMenuList>
-          </DropDownMenuContainer>
-        )}
-      </DropDownMenuListContainer>
+      <DropDownMenuHeader onClick={menuToggle}>{menuName}</DropDownMenuHeader>
+      <DropDownMenuContainer>
+        <DropDownMenuList>
+          {dropDownItemList.map((item) => (
+            <DropDownListItem
+              onClick={onOptionSelected(item)}
+              key={item}
+            >
+              {item}
+            </DropDownListItem>
+          ))}
+        </DropDownMenuList>
+      </DropDownMenuContainer>
     </>
+  );
+}
+
+DropDownMenu.defaultProps = {
+  dropDownItemList: [],
+};
+
+function MainPage() {
+  return (
+    <HorizontalContainer>
+      <HeaderLogo />
+      <HorizontalContainer>
+        <DropDownMenu menuName="전체글" dropDownItemList={firstMenuDropDown} />
+        <DropDownMenu menuName="전체글" dropDownItemList={secondMenuDropDown} />
+      </HorizontalContainer>
+    </HorizontalContainer>
   );
 }
 
