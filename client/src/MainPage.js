@@ -1,44 +1,22 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-
-const HorizontalContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-`;
-
-const VerticalContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const HeaderMainLogo = styled.h1`
-  font-size:3rem;
-  margin: 3px;
-`;
-
-const HeaderSubLogo = styled.h2`
-  font-size:1.5rem;
-  margin:0;
-`;
-
-function HeaderLogo() {
-  return (
-    <VerticalContainer>
-      <HeaderMainLogo>Reviewary</HeaderMainLogo>
-      <HeaderSubLogo>너와 나의 리뷰 도서관</HeaderSubLogo>
-    </VerticalContainer>
-  );
-}
+import HeaderLogo from './common/HeaderLogo';
+import HorizontalContainer from './common/HorizontalContainer';
+import VerticalContainer from './common/VerticalContainer';
 
 const DropDownMenuContainer = styled.div`
   display: none;
   color:#000000;
   width:10rem;
   margin: 0 auto;
+  &:hover {
+    display: block;
+  }
 `;
 
 const DropDownMenuHeader = styled.div`
-  margin: 1rem;
+  margin: 0;
+  padding: 1rem;
   font-weight: 500;
   font-size: 1.3rem;
   background: #ffffff;
