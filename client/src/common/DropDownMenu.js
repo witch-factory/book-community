@@ -15,6 +15,7 @@ const DropDownMenuContainer = styled.div`
 const DropDownMenuHeader = styled.div`
   margin: 0;
   padding: 1rem;
+  text-align: center;
   font-weight: 500;
   font-size: 1.3rem;
   background: #ffffff;
@@ -34,6 +35,9 @@ const DropDownMenuList = styled.ul`
   color:#000000;
   font-size: 1.3rem;
   font-weight: 500;
+  width: 9rem;
+  position: absolute;
+  z-index: 5;
   &:first-child{
     padding-top: 0.8rem;
   }

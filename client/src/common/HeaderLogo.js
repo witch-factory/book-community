@@ -13,7 +13,7 @@ const HeaderSubLogo = styled.h2`
 
 function HeaderLogo() {
   return (
-    <VerticalContainer direction="center">
+    <VerticalContainer horizontal="center">
       <HeaderMainLogo>Reviewary</HeaderMainLogo>
       <HeaderSubLogo>리뷰어리, 너와 나의 리뷰 도서관</HeaderSubLogo>
     </VerticalContainer>
