@@ -30,7 +30,7 @@ const SlideItemContainer = styled.div`
 `;
 
 const SlideContainer = styled.div`
-  width:600px;
+  width:700px;
   overflow: hidden;
 `;
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import HeaderLogo from './common/HeaderLogo';
 import HorizontalContainer from './common/HorizontalContainer';
 import DropDownMenu from './common/DropDownMenu';
@@ -31,6 +32,32 @@ const thirdMenuDropDown = [
 
 const slideMenuImageList = [book1, book2, book3, book4, book5];
 
+const CurrentBoardSummaryBox = styled.div`
+  width: 50rem;
+  height:20rem;
+  margin: 2rem;
+  border: 1px solid #adb5bd;
+  border-radius: 30px;
+  box-shadow: 5px 5px #868e96;
+`;
+
+const CurrentBoardSummaryHeader = styled.div`
+  height:1.2rem;
+  padding:0.8rem 1rem;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #adb5bd;
+`;
+
+function CurrentBoardSummary() {
+  return (
+    <HorizontalContainer>
+      <CurrentBoardSummaryBox>
+        <CurrentBoardSummaryHeader>현재 최신글</CurrentBoardSummaryHeader>
+      </CurrentBoardSummaryBox>
+    </HorizontalContainer>
+  );
+}
+
 function MainPage() {
   return (
     <VerticalContainer horizontal="center">
@@ -42,6 +69,7 @@ function MainPage() {
       </HorizontalContainer>
       <SearchBox />
       <SlideMenu slideMenuImages={slideMenuImageList} />
+      <CurrentBoardSummary />
     </VerticalContainer>
   );
 }
