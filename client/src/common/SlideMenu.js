@@ -5,7 +5,7 @@ import book1 from '../image/book1.jpg';
 
 const SlideImage = styled.img`
   width:100%;
-  height:70vh;
+  height:50vh;
 `;
 
 function SlideItem({ img }) {
@@ -14,14 +14,14 @@ function SlideItem({ img }) {
   );
 }
 
+const SlideContainer = styled.div`
+  width: 100%;
+  display: flex; //이미지들을 가로로 나열
+`;
+
 const SlideItemContainer = styled.div`
   width:50%;
   overflow: hidden;
-`;
-
-const SlideContainer = styled.div`
-  width: 100%;
-  display: flex; //이미지들을 가로로 나열합니다.
 `;
 
 const SlideMenuContainer = styled.div`
@@ -60,7 +60,7 @@ function SlideMenu({ slideMenuImages }) {
 
   return (
     <SlideMenuContainer>
-      <MdArrowBackIosNew onClick={prevSlide} />
+      <MdArrowBackIosNew size="30" onClick={prevSlide} />
       <SlideItemContainer>
         <SlideContainer ref={slideRef}>
           {slideMenuImages.map((item) => (
@@ -68,7 +68,7 @@ function SlideMenu({ slideMenuImages }) {
           ))}
         </SlideContainer>
       </SlideItemContainer>
-      <MdArrowForwardIos onClick={nextSlide} />
+      <MdArrowForwardIos size="30" onClick={nextSlide} />
     </SlideMenuContainer>
   );
 }
