@@ -1,4 +1,6 @@
 import React from 'react';
+import styled from 'styled-components';
+import { MdSearch } from 'react-icons/md';
 import HeaderLogo from './common/HeaderLogo';
 import HorizontalContainer from './common/HorizontalContainer';
 import DropDownMenu from './common/DropDownMenu';
@@ -30,6 +32,43 @@ const thirdMenuDropDown = [
 
 const slideMenuImageList = [book1, book2, book3, book4, book5];
 
+const SearchBoxContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 0;
+`;
+
+const SearchTextBox = styled.input`
+  width: 15rem;
+  border-radius: 15rem;
+  padding-left:1rem;
+  height: 2rem;
+  font-size: 1.5rem;
+`;
+
+const SearchButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+function SearchBoxSearchButton() {
+  return (
+    <SearchButtonContainer>
+      <MdSearch size="30" />
+    </SearchButtonContainer>
+  );
+}
+
+function SearchBox() {
+  return (
+    <SearchBoxContainer>
+      <SearchTextBox />
+      <SearchBoxSearchButton />
+    </SearchBoxContainer>
+  );
+}
+
 function MainPage() {
   return (
     <VerticalContainer horizontal="center">
@@ -39,6 +78,7 @@ function MainPage() {
         <DropDownMenu menuName="전체글" dropDownItemList={secondMenuDropDown} />
         <DropDownMenu menuName="전체글" dropDownItemList={thirdMenuDropDown} />
       </HorizontalContainer>
+      <SearchBox />
       <SlideMenu slideMenuImages={slideMenuImageList} />
     </VerticalContainer>
   );
