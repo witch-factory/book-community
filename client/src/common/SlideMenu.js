@@ -4,23 +4,32 @@ import { MdArrowBackIosNew, MdArrowForwardIos } from 'react-icons/md';
 import book1 from '../image/book1.jpg';
 
 const SlideImage = styled.img`
-  width:100%;
-  height:50vh;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+`;
+
+const SlideImageContainer = styled.div`
+  flex:1 0 auto;
+  width: 100%;
 `;
 
 function SlideItem({ img }) {
   return (
-    <SlideImage src={img || book1} />
+    <SlideImageContainer>
+      <SlideImage src={img || book1} />
+    </SlideImageContainer>
   );
 }
 
-const SlideContainer = styled.div`
+const SlideItemContainer = styled.div`
   width: 100%;
+  height:500px;
   display: flex; //이미지들을 가로로 나열
 `;
 
-const SlideItemContainer = styled.div`
-  width:50%;
+const SlideContainer = styled.div`
+  width:600px;
   overflow: hidden;
 `;
 
@@ -61,13 +70,13 @@ function SlideMenu({ slideMenuImages }) {
   return (
     <SlideMenuContainer>
       <MdArrowBackIosNew size="30" onClick={prevSlide} />
-      <SlideItemContainer>
-        <SlideContainer ref={slideRef}>
+      <SlideContainer>
+        <SlideItemContainer ref={slideRef}>
           {slideMenuImages.map((item) => (
             <SlideItem img={item} />
           ))}
-        </SlideContainer>
-      </SlideItemContainer>
+        </SlideItemContainer>
+      </SlideContainer>
       <MdArrowForwardIos size="30" onClick={nextSlide} />
     </SlideMenuContainer>
   );
