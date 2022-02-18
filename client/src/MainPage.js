@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import HeaderLogo from './common/HeaderLogo';
 import HorizontalContainer from './common/HorizontalContainer';
 import DropDownMenu from './common/DropDownMenu';
@@ -11,6 +10,7 @@ import book5 from './image/book5.jpg';
 import SlideMenu from './common/SlideMenu';
 import SearchBox from './common/SearchBox';
 import VerticalContainer from './common/VerticalContainer';
+import CurrentBoardSummary from './common/CurrentBoardSummary';
 
 const firstMenuDropDown = [
   '자유게시판',
@@ -32,28 +32,6 @@ const thirdMenuDropDown = [
 
 const slideMenuImageList = [book1, book2, book3, book4, book5];
 
-const CurrentBoardSummaryBox = styled.div`
-  width: 23rem;
-  height:20rem;
-  margin: 2rem;
-  border: 1px solid #adb5bd;
-  border-radius: 30px;
-  box-shadow: 5px 5px #868e96;
-`;
-
-const CurrentBoardSummaryHeader = styled.div`
-  height:1.2rem;
-  padding:0.8rem 1rem;
-  font-size: 1.1rem;
-  border-bottom: 1px solid #adb5bd;
-`;
-
-const CurrentBoardSummaryList = styled.ul``;
-
-const CurrentBoardSummaryItem = styled.li`
-  margin:0.7rem 0;
-`;
-
 const FirstBoardTitle = [
   '글제목 1',
   '글제목 2',
@@ -72,28 +50,6 @@ const FirstBoardTitle = [
   '글제목 15',
 ];
 
-function CurrentBoardSummary({ BoardSummaryName, BoardTitles = FirstBoardTitle }) {
-  return (
-    <HorizontalContainer>
-      <CurrentBoardSummaryBox>
-        <CurrentBoardSummaryHeader>
-          {BoardSummaryName || '게시판 1 최신글'}
-        </CurrentBoardSummaryHeader>
-        <CurrentBoardSummaryList>
-          {BoardTitles.slice(0, 7).map((title) => (
-            <CurrentBoardSummaryItem
-              key={title}
-              // 글 제목 간 중복이 있을 수 있으므로 추후 이 key 는 수정 예정
-            >
-              {title}
-            </CurrentBoardSummaryItem>
-          ))}
-        </CurrentBoardSummaryList>
-      </CurrentBoardSummaryBox>
-    </HorizontalContainer>
-  );
-}
-
 function MainPage() {
   return (
     <VerticalContainer horizontal="center">
@@ -109,7 +65,7 @@ function MainPage() {
       <SlideMenu slideMenuImages={slideMenuImageList} />
       <HorizontalContainer>
         <CurrentBoardSummary BoardTitles={FirstBoardTitle} />
-        <CurrentBoardSummary />
+        <CurrentBoardSummary BoardTitles={FirstBoardTitle} />
       </HorizontalContainer>
     </VerticalContainer>
   );
