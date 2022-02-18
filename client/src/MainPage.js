@@ -61,11 +61,13 @@ function CurrentBoardSummary() {
 function MainPage() {
   return (
     <VerticalContainer horizontal="center">
-      <HeaderLogo />
-      <HorizontalContainer horizontal="center">
-        <DropDownMenu menuName="전체글" dropDownItemList={firstMenuDropDown} />
-        <DropDownMenu menuName="전체글" dropDownItemList={secondMenuDropDown} />
-        <DropDownMenu menuName="전체글" dropDownItemList={thirdMenuDropDown} />
+      <HorizontalContainer>
+        <HeaderLogo />
+        <HorizontalContainer horizontal="center">
+          <DropDownMenu menuName="전체글" dropDownItemList={firstMenuDropDown} />
+          <DropDownMenu menuName="전체글" dropDownItemList={secondMenuDropDown} />
+          <DropDownMenu menuName="전체글" dropDownItemList={thirdMenuDropDown} />
+        </HorizontalContainer>
       </HorizontalContainer>
       <SearchBox />
       <SlideMenu slideMenuImages={slideMenuImageList} />

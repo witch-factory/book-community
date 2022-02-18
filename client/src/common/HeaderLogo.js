@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import VerticalContainer from './VerticalContainer';
 
 const HeaderMainLogo = styled.h1`
-  font-size:3rem;
+  font-size:2.5rem;
   margin: 3px;
 `;
 
 const HeaderSubLogo = styled.h2`
-  font-size:1.5rem;
+  font-size:1.2rem;
   margin:0;
 `;
 
