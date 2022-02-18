@@ -1,10 +1,15 @@
 import styled from 'styled-components';
 import { MdSearch } from 'react-icons/md';
 
+const SearchBoxPhrase = styled.h1`
+  font-size:1.8rem;
+  margin-top:2rem;
+`;
+
 const SearchBoxContainer = styled.div`
   display: flex;
   flex-direction: row;
-  margin: 2rem;
+  margin-bottom: 2rem;
 `;
 
 const SearchTextBox = styled.input`
@@ -35,10 +40,13 @@ function SearchBoxSearchButton() {
 
 function SearchBox() {
   return (
-    <SearchBoxContainer>
-      <SearchTextBox placeholder="책 검색하기" />
-      <SearchBoxSearchButton />
-    </SearchBoxContainer>
+    <>
+      <SearchBoxPhrase>원하는 책을 검색해 보세요</SearchBoxPhrase>
+      <SearchBoxContainer>
+        <SearchTextBox placeholder="책 검색하기" />
+        <SearchBoxSearchButton />
+      </SearchBoxContainer>
+    </>
   );
 }
 

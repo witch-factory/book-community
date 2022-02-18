@@ -25,7 +25,7 @@ function SlideItem({ img }) {
 
 const SlideItemContainer = styled.div`
   width: 100%;
-  height:500px;
+  height:300px;
   display: flex; //이미지들을 가로로 나열
 `;
 
