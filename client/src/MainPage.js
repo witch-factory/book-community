@@ -1,7 +1,6 @@
 import React from 'react';
-import HeaderLogo from './common/HeaderLogo';
+import Head from './Head';
 import HorizontalContainer from './common/HorizontalContainer';
-import DropDownMenu from './common/DropDownMenu';
 import book1 from './image/book1.jpg';
 import book2 from './image/book2.jpg';
 import book3 from './image/book3.jpg';
@@ -11,24 +10,6 @@ import SlideMenu from './common/SlideMenu';
 import SearchBox from './common/SearchBox';
 import VerticalContainer from './common/VerticalContainer';
 import CurrentBoardSummary from './common/CurrentBoardSummary';
-
-const firstMenuDropDown = [
-  '자유게시판',
-  '리뷰게시판',
-  '장르별게시판',
-];
-
-const secondMenuDropDown = [
-  '자유게시판',
-  '리뷰게시판',
-  '장르별게시판',
-];
-
-const thirdMenuDropDown = [
-  '자유게시판',
-  '리뷰게시판',
-  '장르별게시판',
-];
 
 const slideMenuImageList = [book1, book2, book3, book4, book5];
 
@@ -52,22 +33,22 @@ const FirstBoardTitle = [
 
 function MainPage() {
   return (
+
     <VerticalContainer horizontal="center">
-      <HorizontalContainer>
-        <HeaderLogo />
-        <HorizontalContainer horizontal="center">
-          <DropDownMenu menuName="전체글" dropDownItemList={firstMenuDropDown} />
-          <DropDownMenu menuName="전체글" dropDownItemList={secondMenuDropDown} />
-          <DropDownMenu menuName="전체글" dropDownItemList={thirdMenuDropDown} />
-        </HorizontalContainer>
-      </HorizontalContainer>
+
+      <Head />
+
       <SearchBox />
+
       <SlideMenu slideMenuImages={slideMenuImageList} />
+
       <HorizontalContainer>
         <CurrentBoardSummary BoardTitles={FirstBoardTitle} />
         <CurrentBoardSummary BoardTitles={FirstBoardTitle} />
       </HorizontalContainer>
+
     </VerticalContainer>
+
   );
 }
 
