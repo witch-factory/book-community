@@ -2,9 +2,12 @@ import styled from 'styled-components';
 import React from 'react';
 
 const SmallGroupSummaryContainer = styled.div`
-  width:1100px;
+  width:100%;
   background: #e7f5ff;
   margin-top:1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const SmallGroupSummaryTitle = styled.h1`
@@ -12,6 +15,7 @@ const SmallGroupSummaryTitle = styled.h1`
 `;
 
 const SmallGroupSummaryItem = styled.h3`
+  margin:0.5rem;
   font-size:1rem;
 `;
 
@@ -19,7 +23,15 @@ function SmallGroupSummary({ TitleList }) {
   return (
     <SmallGroupSummaryContainer>
       <SmallGroupSummaryTitle>현재 모집중인 소모임들</SmallGroupSummaryTitle>
-      {TitleList.map((groupTitle) => <SmallGroupSummaryItem>{groupTitle}</SmallGroupSummaryItem>)}
+      {TitleList.map(
+        (groupTitle) => (
+          <SmallGroupSummaryItem
+            key={groupTitle}
+          >
+            {groupTitle}
+          </SmallGroupSummaryItem>
+        ),
+      )}
     </SmallGroupSummaryContainer>
   );
 }

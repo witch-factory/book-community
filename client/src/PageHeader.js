@@ -1,7 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
 import HeaderLogo from './common/HeaderLogo';
-import HorizontalContainer from './common/HorizontalContainer';
 import DropDownMenu from './common/DropDownMenu';
+
+const PageHeaderContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin:0;
+`;
 
 const firstMenuDropDown = [
   '자유게시판',
@@ -23,13 +30,13 @@ const thirdMenuDropDown = [
 
 function PageHeader() {
   return (
-    <HorizontalContainer>
+    <PageHeaderContainer>
       <HeaderLogo />
       <DropDownMenu menuName="전체글" dropDownItemList={firstMenuDropDown} />
       <DropDownMenu menuName="전체글" dropDownItemList={secondMenuDropDown} />
       <DropDownMenu menuName="전체글" dropDownItemList={thirdMenuDropDown} />
 
-    </HorizontalContainer>
+    </PageHeaderContainer>
   );
 }
 
