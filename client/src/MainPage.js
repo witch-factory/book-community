@@ -1,5 +1,6 @@
 import React from 'react';
-import Head from './Head';
+import styled from 'styled-components';
+import PageHeader from './PageHeader';
 import HorizontalContainer from './common/HorizontalContainer';
 import book1 from './image/book1.jpg';
 import book2 from './image/book2.jpg';
@@ -10,10 +11,11 @@ import SlideMenu from './common/SlideMenu';
 import SearchBox from './common/SearchBox';
 import VerticalContainer from './common/VerticalContainer';
 import CurrentBoardSummary from './common/CurrentBoardSummary';
+import SmallGroupSummary from './SmallGroupSummary';
 
 const slideMenuImageList = [book1, book2, book3, book4, book5];
 
-const FirstBoardTitle = [
+const firstBoardTitleList = [
   '글제목 1',
   '글제목 2',
   '글제목 3',
@@ -31,22 +33,43 @@ const FirstBoardTitle = [
   '글제목 15',
 ];
 
+const smallGroupTitleList = [
+  '소모임 모집글 1',
+  '소모임 모집글 2',
+  '소모임 모집글 3',
+  '소모임 모집글 4',
+];
+
+const PageFooterContainer = styled.div`
+  width:1100px;
+  background: #343a40;
+  color:white;
+`;
+
+function PageFooter() {
+  return (
+    <PageFooterContainer>
+      <h1>하단 메뉴</h1>
+    </PageFooterContainer>
+  );
+}
+
 function MainPage() {
   return (
 
     <VerticalContainer horizontal="center">
 
-      <Head />
+      <PageHeader />
 
       <SearchBox />
 
       <SlideMenu slideMenuImages={slideMenuImageList} />
-
+      <SmallGroupSummary TitleList={smallGroupTitleList} />
       <HorizontalContainer>
-        <CurrentBoardSummary BoardTitles={FirstBoardTitle} />
-        <CurrentBoardSummary BoardTitles={FirstBoardTitle} />
+        <CurrentBoardSummary BoardTitles={firstBoardTitleList} />
+        <CurrentBoardSummary BoardTitles={firstBoardTitleList} />
       </HorizontalContainer>
-
+      <PageFooter />
     </VerticalContainer>
 
   );

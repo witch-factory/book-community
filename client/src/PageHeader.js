@@ -21,7 +21,7 @@ const thirdMenuDropDown = [
   '장르별게시판',
 ];
 
-function Head() {
+function PageHeader() {
   return (
     <HorizontalContainer>
       <HeaderLogo />
@@ -33,4 +33,4 @@ function Head() {
   );
 }
 
-export default Head;
+export default PageHeader;
