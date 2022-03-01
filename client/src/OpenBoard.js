@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import Head from './Head';
+import PageHeader from './PageHeader';
 import VerticalContainer from './common/VerticalContainer';
 
 function OpenBoard() {
@@ -9,7 +9,7 @@ function OpenBoard() {
   return (
     <VerticalContainer horizontal="center">
 
-      <Head />
+      <PageHeader />
       <PageTitle>
         <h1>자유게시판</h1>
         <p>자유롭게 글을 쓸 수 있는 공간입니다.</p>

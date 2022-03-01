@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { MdArrowBackIosNew, MdArrowForwardIos } from 'react-icons/md';
+import { nanoid } from 'nanoid';
 import book1 from '../image/book1.jpg';
 
 const SlideImage = styled.img`
@@ -74,7 +75,7 @@ function SlideMenu({ slideMenuImages }) {
       <SlideContainer>
         <SlideItemContainer ref={slideRef}>
           {slideMenuImages.map((item) => (
-            <SlideItem img={item} />
+            <SlideItem key={nanoid()} img={item} />
           ))}
         </SlideItemContainer>
       </SlideContainer>
