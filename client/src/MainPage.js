@@ -32,17 +32,33 @@ const PageFooterContainer = styled.div`
   background: #343a40;
   color:white;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top:1rem;
+  padding-bottom: 5rem;
 `;
 
 const SiteMapListContainer = styled.div`
   display: flex;
   flex-direction: column;
+  margin:0 1rem;
 `;
 
-function SiteMapList({ menuList }) {
+const SiteMapListTitle = styled.h2`
+  margin: 0.5rem;
+  font-size: 1.5rem;
+`;
+
+const SiteMapListItem = styled.h3`
+  margin:0.3rem;
+  font-size: 1rem;
+`;
+
+function SiteMapList({ title, menuList }) {
   return (
     <SiteMapListContainer>
-      {menuList.map((item) => <h4 key={item}>{item}</h4>)}
+      <SiteMapListTitle>{title}</SiteMapListTitle>
+      {menuList.map((item) => <SiteMapListItem key={item}>{item}</SiteMapListItem>)}
     </SiteMapListContainer>
   );
 }
@@ -51,7 +67,13 @@ function PageFooter() {
   return (
     <PageFooterContainer>
       <SiteMapListContainer>
-        <SiteMapList menuList={siteMenuList} />
+        <SiteMapList title="게시판" menuList={siteMenuList} />
+      </SiteMapListContainer>
+      <SiteMapListContainer>
+        <SiteMapList title="게시판" menuList={siteMenuList} />
+      </SiteMapListContainer>
+      <SiteMapListContainer>
+        <SiteMapList title="게시판" menuList={siteMenuList} />
       </SiteMapListContainer>
     </PageFooterContainer>
   );
