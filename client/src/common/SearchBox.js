@@ -4,7 +4,7 @@ import { MdSearch } from 'react-icons/md';
 const SearchEngineContainer = styled.div`
   margin-bottom:1rem;
   width:100%;
-  height:300px;
+  height:40vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,6 +16,8 @@ const SearchEngineMainPhrase = styled.h1`
   font-size:4vh;
   margin:0;
   margin-top:2rem;
+  white-space: pre-wrap;
+  text-align: center;
 `;
 
 const SearchEngineSubPhrase = styled.h2`
@@ -30,11 +32,11 @@ const SearchBoxContainer = styled.div`
 `;
 
 const SearchTextBox = styled.input`
-  width: 40rem;
+  width: 60vw;
   border-radius: 17.5rem 0 0 17.5rem;
   padding-left:1.2rem;
-  height: 4rem;
-  font-size: 1.8rem;
+  height: 6vh;
+  font-size: 4vh;
 `;
 
 const SearchButtonContainer = styled.button`
@@ -60,10 +62,11 @@ function SearchBox() {
     <SearchEngineContainer>
       <SearchEngineMainPhrase>
         원하는 것을 검색해 보세요.
+        <br />
         책, 서평, 소모임, 책에 관련된 모든 것이 있답니다.
       </SearchEngineMainPhrase>
       <SearchEngineSubPhrase>
-        책에 관련된 것을 당신이 만들 수도 있어요.
+        원하는 게 없다면 추천해 드릴 수도 있어요.
       </SearchEngineSubPhrase>
       <SearchBoxContainer>
         <SearchTextBox placeholder="검색하기" />

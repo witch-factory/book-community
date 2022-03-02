@@ -3,7 +3,8 @@ import React from 'react';
 
 const SmallGroupSummaryContainer = styled.div`
   width:100%;
-  background: #e7f5ff;
+  height:30vh;
+  background: #fff9db;
   margin-top:1rem;
   display: flex;
   flex-direction: column;
@@ -28,7 +29,7 @@ function SmallGroupSummary({ TitleList }) {
           <SmallGroupSummaryItem
             key={groupTitle}
           >
-            {groupTitle}
+            {`#${groupTitle}`}
           </SmallGroupSummaryItem>
         ),
       )}

@@ -8,6 +8,7 @@ const PageHeaderContainer = styled.div`
   flex-direction: row;
   align-items: center;
   margin:0;
+  height:10vh;
 `;
 
 const firstMenuDropDown = [

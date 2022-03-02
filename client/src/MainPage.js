@@ -24,7 +24,7 @@ const siteMenuList = [
   '자유게시판',
   '리뷰게시판',
   '어떤게시판',
-  '게시판1',
+  '게시판이름',
 ];
 
 const PageFooterContainer = styled.div`
@@ -41,17 +41,19 @@ const PageFooterContainer = styled.div`
 const SiteMapListContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin:0 1rem;
+  align-items: flex-start;
+  margin:0 0.3rem;
 `;
 
 const SiteMapListTitle = styled.h2`
-  margin: 0.5rem;
   font-size: 1.5rem;
+  text-align: left;
 `;
 
 const SiteMapListItem = styled.h3`
-  margin:0.3rem;
+  margin:0;
   font-size: 1rem;
+  font-weight: normal;
 `;
 
 function SiteMapList({ title, menuList }) {
@@ -67,13 +69,13 @@ function PageFooter() {
   return (
     <PageFooterContainer>
       <SiteMapListContainer>
-        <SiteMapList title="게시판" menuList={siteMenuList} />
+        <SiteMapList title="게시판1" menuList={siteMenuList} />
       </SiteMapListContainer>
       <SiteMapListContainer>
-        <SiteMapList title="게시판" menuList={siteMenuList} />
+        <SiteMapList title="게시판2" menuList={siteMenuList} />
       </SiteMapListContainer>
       <SiteMapListContainer>
-        <SiteMapList title="게시판" menuList={siteMenuList} />
+        <SiteMapList title="게시판3" menuList={siteMenuList} />
       </SiteMapListContainer>
     </PageFooterContainer>
   );
