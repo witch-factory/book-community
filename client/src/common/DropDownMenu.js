@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import VerticalContainer from './VerticalContainer';
 
-const DropDownMenuContainer = styled.div`
+const DropDownMenuBox = styled.div`
   display: none;
   color:#000000;
   width:10rem;
@@ -20,8 +20,8 @@ const DropDownMenuHeader = styled.div`
   font-size: 1.3rem;
   background: #ffffff;
   height:1.8rem;
-  width:9rem;
-  &:hover + ${DropDownMenuContainer}{
+  width:8rem;
+  &:hover + ${DropDownMenuBox}{
     display:block;
   }
 `;
@@ -60,7 +60,7 @@ function DropDownMenu({ menuName, dropDownItemList }) {
   return (
     <VerticalContainer>
       <DropDownMenuHeader>{menuName}</DropDownMenuHeader>
-      <DropDownMenuContainer>
+      <DropDownMenuBox>
         <DropDownMenuList>
           {dropDownItemList.map((item) => (
             <DropDownListItem
@@ -71,7 +71,7 @@ function DropDownMenu({ menuName, dropDownItemList }) {
             </DropDownListItem>
           ))}
         </DropDownMenuList>
-      </DropDownMenuContainer>
+      </DropDownMenuBox>
     </VerticalContainer>
   );
 }

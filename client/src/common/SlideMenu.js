@@ -14,6 +14,7 @@ const SlideImageContainer = styled.div`
   flex:1 0 auto;
   width: 100%;
   background: black;
+  //추후에 다른 색으로 바꿉시다.
 `;
 
 function SlideItem({ img }) {
@@ -26,16 +27,17 @@ function SlideItem({ img }) {
 
 const SlideItemContainer = styled.div`
   width: 100%;
-  height:300px;
+  height:400px;
   display: flex; //이미지들을 가로로 나열
 `;
 
 const SlideContainer = styled.div`
-  width:700px;
+  width:100%;
   overflow: hidden;
 `;
 
 const SlideMenuContainer = styled.div`
+  width:100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
