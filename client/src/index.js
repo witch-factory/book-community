@@ -5,15 +5,17 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import MainPage from "./MainPage";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import OpenBoard from './OpenBoard';
-import WriteReview from './WriteReview';
+import OpenBoardPage from './OpenBoardPage';
+import WriteReviewPage from './WriteReviewPage';
+import BookSharingPage from "./BookSharingPage";
 
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path="" element={<MainPage />} />
-      <Route path="/openBoard" element={<OpenBoard />} />
-      <Route path="/writeReview" element={<WriteReview />} />
+      <Route path="/openBoard" element={<OpenBoardPage />} />
+      <Route path="/writeReview" element={<WriteReviewPage />} />
+      <Route path="/bookShare" element={<BookSharingPage />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById('root'),

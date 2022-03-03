@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import PageHeader from './PageHeader';
 import VerticalContainer from './common/VerticalContainer';
 
-function OpenBoard() {
+function OpenBoardPage() {
   const navigate = useNavigate();
   return (
     <VerticalContainer horizontal="center">
@@ -112,4 +112,4 @@ const Bottom = styled.div`
         color: white;
     }
 `;
-export default OpenBoard;
+export default OpenBoardPage;
