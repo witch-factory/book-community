@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import PageHeader from './PageHeader';
+import PageHeader from './common/PageHeader';
 import VerticalContainer from './common/VerticalContainer';
 
 function OpenBoardPage() {
