@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import VerticalContainer from './common/VerticalContainer';
 import StarRate from './common/StarRate';
 
-function WriteReview() {
+function WriteReviewPage() {
   return (
     <VerticalContainer horizontal="center">
       <Title>Book Review</Title>
@@ -79,4 +79,4 @@ const Button = styled.button`
         background-color: slateblue;
     }
 `;
-export default WriteReview;
+export default WriteReviewPage;

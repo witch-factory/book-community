@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import HeaderLogo from './common/HeaderLogo';
-import DropDownMenu from './common/DropDownMenu';
+import HeaderLogo from './HeaderLogo';
+import DropDownMenu from './DropDownMenu';
 
 const PageHeaderContainer = styled.div`
   display: flex;
