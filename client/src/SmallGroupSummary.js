@@ -4,7 +4,7 @@ import React from 'react';
 const SmallGroupSummaryContainer = styled.div`
   width:100%;
   height:30vh;
-  background: #fff9db;
+  background: #a2c7ff;
   margin-top:1rem;
   display: flex;
   flex-direction: column;

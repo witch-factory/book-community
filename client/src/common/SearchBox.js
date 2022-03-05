@@ -9,11 +9,11 @@ const SearchEngineContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #dee2e6;
+  background: lightyellow;
 `;
 
 const SearchEngineMainPhrase = styled.h1`
-  font-size:4vh;
+  font-size:3vh;
   margin:0;
   margin-top:2rem;
   white-space: pre-wrap;
@@ -21,7 +21,8 @@ const SearchEngineMainPhrase = styled.h1`
 `;
 
 const SearchEngineSubPhrase = styled.h2`
-  font-size:2.5vh;
+  font-size:2vh;
+  margin-top:1.5rem;
   margin-bottom:1rem;
 `;
 
@@ -32,11 +33,17 @@ const SearchBoxContainer = styled.div`
 `;
 
 const SearchTextBox = styled.input`
-  width: 60vw;
+  width: 40vw;
   border-radius: 17.5rem 0 0 17.5rem;
   padding-left:1.2rem;
   height: 6vh;
-  font-size: 4vh;
+  font-size: 2.5vh;
+  border: 3px solid slateblue;
+
+  :focus {
+    outline: none;
+    border: 3px solid slateblue;
+  }
 `;
 
 const SearchButtonContainer = styled.button`
@@ -47,12 +54,13 @@ const SearchButtonContainer = styled.button`
   //border: 1.5px solid black;
   border-radius: 0 17.5rem 17.5rem 0;
   padding: 3px;
+  background-color: slateblue;
 `;
 
 function SearchBoxSearchButton() {
   return (
     <SearchButtonContainer>
-      <MdSearch size="35" />
+      <MdSearch size="35" color="white" />
     </SearchButtonContainer>
   );
 }
