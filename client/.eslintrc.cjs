@@ -6,9 +6,10 @@ module.exports = {
   },
   rules: {
     'linebreak-style': 0,
-    'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }],
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
+    'object-curly-newline': 'off',
   },
   extends: ['airbnb'],
 };
