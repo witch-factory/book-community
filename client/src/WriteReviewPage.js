@@ -1,16 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import VerticalContainer from './common/VerticalContainer';
+import StarRate from './common/StarRate';
 
-function WriteReview() {
+function WriteReviewPage() {
   return (
     <VerticalContainer horizontal="center">
       <Title>Book Review</Title>
 
       <Wrap>
         <input className="title" type="text" placeholder="책 제목" />
-        <div>평가하기 ★★★★★</div>
-        <input className="content" type="text" placeholder="내용" />
+        <StarRate />
+        <textarea className="content" type="text" placeholder="/*자유롭게 입력하세요~*/" />
       </Wrap>
       <Button type="button">입력</Button>
     </VerticalContainer>
@@ -40,16 +41,13 @@ const Wrap = styled.div`
         border-radius: 20px;
         postion: absolute;
         margin-left: 30%;
+        font-size: 20px;
+        background-color: lightyellow;
+        border: 3px solid skyblue;
     }
 
     & .title:hover {
-        border: 2px solid blue;
-        background-color: aqua;
-    }
-
-    & div {
-        text-align: center;
-        padding: 20px;
+        outline: none;
     }
 
     & .content {
@@ -58,6 +56,14 @@ const Wrap = styled.div`
         border-radius: 10px;
         postion: absolute;
         margin-left: 10%;
+        font-size: 18px;
+        border: 4px solid yellowgreen;
+        background-color: lightyellow;
+    }
+
+    & .content:hover {
+      background-color: white;
+      outline: none;
     }
 `;
 
@@ -73,4 +79,4 @@ const Button = styled.button`
         background-color: slateblue;
     }
 `;
-export default WriteReview;
+export default WriteReviewPage;
