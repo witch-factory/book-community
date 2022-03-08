@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 import VerticalContainer from './common/VerticalContainer';
 import StarRate from './common/StarRate';
 
 function WriteReviewPage() {
+  const navigate = useNavigate();
   return (
     <VerticalContainer horizontal="center">
       <Title>Book Review</Title>
@@ -12,8 +14,12 @@ function WriteReviewPage() {
         <input className="title" type="text" placeholder="책 제목" />
         <StarRate />
         <textarea className="content" type="text" placeholder="/*자유롭게 입력하세요~*/" />
+
+        <ButtonWrap>
+          <Button type="button" className="backButton" onClick={() => { navigate('/openBoard'); }}>뒤로가기</Button>
+          <Button type="button" className="inputButton">입력</Button>
+        </ButtonWrap>
       </Wrap>
-      <Button type="button">입력</Button>
     </VerticalContainer>
   );
 }
@@ -31,7 +37,7 @@ const Title = styled.h1`
 const Wrap = styled.div`
     width: 1100px;
     margin: 1rem;
-    height: 50vh;
+    height: 65vh;
     display: flex;
     flex-direction: column;
 
@@ -67,6 +73,23 @@ const Wrap = styled.div`
     }
 `;
 
+const ButtonWrap = styled.div`
+  display: flex;
+  align-items: row;
+  width: 80%;
+  // position: absolute;
+  // background-color: green;
+  margin-left: 10%;
+  margin-top: 30px;
+  .backButton:hover {
+    background-color: #9787f8;
+  }
+  .inputButton {
+    margin-left: 34%;
+    background-color: slateblue;
+  }
+`;
+
 const Button = styled.button`
     width: 100px;
     background-color: gray;
@@ -78,5 +101,6 @@ const Button = styled.button`
     &:hover {
         background-color: slateblue;
     }
+
 `;
 export default WriteReviewPage;
