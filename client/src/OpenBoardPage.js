@@ -12,6 +12,7 @@ const posts = [
     views: 1500,
     date: '2022-03-07',
   },
+
   {
     id: 2,
     title: '이 책 재밌어요',
@@ -19,6 +20,7 @@ const posts = [
     views: 567,
     date: '2022-03-06',
   },
+
   {
     id: 1,
     title: 'test',
@@ -26,6 +28,7 @@ const posts = [
     views: 123,
     date: '2022-03-05',
   },
+
 ];
 
 function OpenBoardPage() {
@@ -87,8 +90,11 @@ function OpenBoardPage() {
   );
 }
 
-function Post({ id, title, author, views, date }) {
+function Post({
+  id, title, author, views, date,
+}) {
   return (
+
     <TableHead>
       <div>{id}</div>
       <div>{title}</div>
@@ -96,6 +102,7 @@ function Post({ id, title, author, views, date }) {
       <div>{views}</div>
       <div>{date}</div>
     </TableHead>
+
   );
 }
 
@@ -168,4 +175,5 @@ const Bottom = styled.div`
     color: white;
   }
 `;
+
 export default OpenBoardPage;

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 import HeaderLogo from './HeaderLogo';
 import DropDownMenu from './DropDownMenu';
 
@@ -51,13 +52,15 @@ const MyPage = styled.div`
 `;
 
 function PageHeader() {
+  const navigate = useNavigate();
+
   return (
     <PageHeaderContainer>
       <HeaderLogo />
       <DropDownMenu menuName="전체글" dropDownItemList={firstMenuDropDown} />
       <DropDownMenu menuName="전체글" dropDownItemList={secondMenuDropDown} />
       <DropDownMenu menuName="전체글" dropDownItemList={thirdMenuDropDown} />
-      <MyPage>마이페이지</MyPage>
+      <MyPage onClick={() => { navigate('/personalPage'); }}>마이페이지</MyPage>
 
     </PageHeaderContainer>
   );
