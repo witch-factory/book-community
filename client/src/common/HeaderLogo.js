@@ -16,17 +16,17 @@ const HeaderMainLogo = styled.h1`
   color: slateblue;
 `;
 
-const HeaderSubLogo = styled.h2`
-  font-size:1.2rem;
-  margin:0;
-`;
+// const HeaderSubLogo = styled.h2`
+//   font-size:1.2rem;
+//   margin:0;
+// `;
 
 function HeaderLogo() {
   const navigate = useNavigate();
   return (
     <HeaderLogoContainer>
       <HeaderMainLogo onClick={() => { navigate('/'); }}>Reviewary</HeaderMainLogo>
-      <HeaderSubLogo>리뷰어리, 너와 나의 리뷰 도서관</HeaderSubLogo>
+      {/* <HeaderSubLogo>리뷰어리, 너와 나의 리뷰 도서관</HeaderSubLogo> */}
     </HeaderLogoContainer>
   );
 }

@@ -2,31 +2,91 @@ import React from 'react';
 import styled from 'styled-components';
 import HeaderLogo from './common/HeaderLogo';
 import background from './image/background.jpg';
+import cat from './image/cat.JPG';
 
 const LogoContainer = styled.div`
   width: 300px;
+  height: 70px;
 `;
 
 const BgImageContainer = styled.img`
   width: 100%;
-  height: 500px;
+  height: 450px;
   object-fit: fill;
 `;
 
 const ProfileContainer = styled.div`
   display: flex;
-  position: relative
+  flex-direction: column;
+  position: relative;
+  background-color: whtie;
+  height: 670px;
 
 `;
 
-const ProfileImage = styled.div`
-  margin-top: 10%;
-  margin-left: 44%;
-  width: 200px;
-  height: 200px;
-  background-color: white;
+const ProfileImage = styled.img`
+  margin-top: 345px;
+  margin-left: 46%;
+  width: 180px;
+  height: 180px;
+  background-color: pink;
   position: absolute;
   border-radius: 500px;
+`;
+
+const ProfileNickname = styled.div`
+  background-color: white;
+  height: 40px;
+  margin-top: 85px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bolder;
+`;
+
+const ProfileOneLine = styled.div`
+  background-color: white;
+  height: 40px;
+  // margin-top: 120px;
+  text-align: center;
+  font-size: 25px;
+  // font-weight: bolder;
+  color: gray;
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  background-color: white;
+  height: 50px;
+
+  & .btn1 {
+  
+    border: 3px solid slateblue;
+    border-radius: 10px;
+    width: 300px;
+    height: 50px;
+    font-size: 23px;
+    color: slateblue;
+    background-color: white;
+    display: block;
+    margin-left: 35%;
+    margin-top: 20px;
+
+  }
+
+  & .btn2 {
+  
+    border: 3px solid slateblue;
+    border-radius: 10px;
+    width: 300px;
+    height: 50px;
+    font-size: 23px;
+    color: slateblue;
+    background-color: white;
+    display: block;
+    margin-left: 10px;
+    margin-top: 20px;
+
+  }
 `;
 
 function PersonalPage() {
@@ -38,8 +98,13 @@ function PersonalPage() {
 
       <ProfileContainer>
         <BgImageContainer src={background} alt="background" />
-        <ProfileImage>개인프로필</ProfileImage>
-        {/* <p>한 줄 소개</p> */}
+        <ProfileImage src={cat} alt="cat" />
+        <ProfileNickname>skyme</ProfileNickname>
+        <ProfileOneLine>안녕하세요. 반가워요!</ProfileOneLine>
+        <ButtonContainer>
+          <button type="button" className="btn1">+ 이웃추가</button>
+          <button type="button" className="btn2">메세지 보내기</button>
+        </ButtonContainer>
       </ProfileContainer>
 
       <button type="button">이웃</button>
