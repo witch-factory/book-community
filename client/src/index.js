@@ -7,7 +7,7 @@ import MainPage from "./MainPage";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import OpenBoardPage from './OpenBoardPage';
 import WriteReviewPage from './WriteReviewPage';
-import BookSharingPage from "./BookSharingPage";
+import BookInfoPage from "./BookInfoPage";
 import PersonalPage from './PersonalPage';
 
 ReactDOM.render(
@@ -16,7 +16,7 @@ ReactDOM.render(
       <Route path="" element={<MainPage />} />
       <Route path="/openBoard" element={<OpenBoardPage />} />
       <Route path="/writeReview" element={<WriteReviewPage />} />
-      <Route path="/bookShare" element={<BookSharingPage />} />
+      <Route path="/bookInfo" element={<BookInfoPage />} />
       <Route path="/personalPage" element={<PersonalPage />} />
     </Routes>
   </BrowserRouter>,
