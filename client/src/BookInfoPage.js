@@ -6,7 +6,7 @@ import PageFooter from './common/PageFooter';
 import book5 from './image/book5.jpg';
 
 function BookCoverImage({ coverImg }) {
-  return <img src={coverImg} alt="Book cover" />;
+  return <img width="300" src={coverImg} alt="Book cover" />;
 }
 
 function BookInfoPage() {
