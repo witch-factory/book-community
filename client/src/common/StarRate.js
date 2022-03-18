@@ -4,9 +4,10 @@ import styled from 'styled-components';
 
 const ARRAY = [0, 1, 2, 3, 4];
 
-function StarRate() {
+function StarRate({ givenRate = 0, readOnly = false }) {
   const [clicked, setClicked] = useState([0, 0, 0, 0, 0]);
-  const [rate, setRate] = useState(0);
+  const [rate, setRate] = useState(givenRate);
+
   const handleStarClick = (index) => {
     const clickStates = [...clicked];
     setRate(index + 1);
@@ -24,7 +25,8 @@ function StarRate() {
           <FaStar
             key={el}
             size="40"
-            onClick={() => handleStarClick(el)}
+            color={rate <= el ? 'gray' : 'red'}
+            onClick={readOnly ? null : () => handleStarClick(el)}
             className={clicked[el] && 'yellowStar'}
           />
         ))}
