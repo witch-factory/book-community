@@ -75,7 +75,7 @@ const Wrap = styled.div`
 
 const ButtonWrap = styled.div`
   display: flex;
-  align-items: row;
+  flex-direction: row;
   width: 80%;
   // position: absolute;
   // background-color: green;
