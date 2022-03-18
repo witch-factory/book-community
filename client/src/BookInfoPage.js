@@ -1,4 +1,5 @@
 import React from 'react';
+import { nanoid } from 'nanoid';
 import VerticalContainer from './common/VerticalContainer';
 import PageHeader from './common/PageHeader';
 import SearchBox from './common/SearchBox';
@@ -86,7 +87,7 @@ function BookReviewBox({ reviewList }) {
         개
       </h1>
       {
-        reviewList.map((review) => <BookReviewItem review={review} />)
+        reviewList.map((review) => <BookReviewItem key={nanoid()} review={review} />)
       }
     </>
   );
