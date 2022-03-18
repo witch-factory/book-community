@@ -115,7 +115,7 @@ const ProfileContainer = styled.div`
   flex-direction: column;
   position: relative;
   background-color: white;
-  height: 670px;
+  height: 400px;
 
 `;
 
