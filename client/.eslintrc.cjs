@@ -10,6 +10,7 @@ module.exports = {
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
     'object-curly-newline': 'off',
+    "import/prefer-default-export":"off",
   },
   extends: ['airbnb'],
 };

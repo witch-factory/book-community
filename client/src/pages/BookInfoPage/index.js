@@ -1,13 +1,12 @@
 import React from 'react';
 import { nanoid } from 'nanoid';
-import styled from 'styled-components';
-import VerticalContainer from './common/VerticalContainer';
-import PageHeader from './common/PageHeader';
-import SearchBox from './common/SearchBox';
-import PageFooter from './common/PageFooter';
-import carrot from './image/carrot.jpg';
-import HorizontalContainer from './common/HorizontalContainer';
-import StarRate from './common/StarRate';
+import VerticalContainer from '../../common/VerticalContainer';
+import SearchBox from '../../common/SearchBox';
+import carrot from '../../image/carrot.jpg';
+import HorizontalContainer from '../../common/HorizontalContainer';
+import StarRate from '../../common/StarRate';
+import { CenterContainer } from './styles';
+import CommonPageLayout from '../../layout/CommonPageLayout';
 
 function BookCoverImage({ coverImg }) {
   return <img width="300" src={coverImg} alt="Book cover" />;
@@ -94,23 +93,15 @@ function BookReviewBox({ reviewList }) {
   );
 }
 
-const TempContainer = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-`;
-
 function BookInfoPage() {
   return (
-    <VerticalContainer>
-      <PageHeader />
-      <TempContainer>
+    <CommonPageLayout>
+      <CenterContainer>
         <SearchBox />
-      </TempContainer>
+      </CenterContainer>
       <BookInfoBox bookTitle="당근 유치원" coverImg={carrot} />
       <BookReviewBox reviewList={bookReviewList} />
-      <PageFooter />
-    </VerticalContainer>
+    </CommonPageLayout>
   );
 }
 

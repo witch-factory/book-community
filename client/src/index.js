@@ -3,13 +3,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import MainPage from "./MainPage";
+import MainPage from "./pages/MainPage";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import OpenBoardPage from './OpenBoardPage';
-import WriteReviewPage from './WriteReviewPage';
-import BookInfoPage from "./BookInfoPage";
-import PersonalPage from './PersonalPage';
-import NotFoundPage from "./NotFoundPage";
+import OpenBoardPage from './pages/OpenBoardPage';
+import WriteReviewPage from './pages/WriteReviewPage';
+import BookInfoPage from "./pages/BookInfoPage";
+import PersonalPage from './pages/PersonalPage';
+import NotFoundPage from "./pages/NotFoundPage";
 
 ReactDOM.render(
   <BrowserRouter>
