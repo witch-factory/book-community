@@ -1,5 +1,6 @@
 import React from 'react';
 import { nanoid } from 'nanoid';
+import styled from 'styled-components';
 import VerticalContainer from './common/VerticalContainer';
 import PageHeader from './common/PageHeader';
 import SearchBox from './common/SearchBox';
@@ -93,11 +94,19 @@ function BookReviewBox({ reviewList }) {
   );
 }
 
+const TempContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;
+
 function BookInfoPage() {
   return (
     <VerticalContainer>
       <PageHeader />
-      <SearchBox />
+      <TempContainer>
+        <SearchBox />
+      </TempContainer>
       <BookInfoBox bookTitle="당근 유치원" coverImg={carrot} />
       <BookReviewBox reviewList={bookReviewList} />
       <PageFooter />
