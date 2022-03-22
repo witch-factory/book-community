@@ -42,6 +42,7 @@ function StarRate({ givenRate = 0, readOnly = false }) {
 export default StarRate;
 
 const Rate = styled.div`
+  width:60px;
   margin: 3px 10px;
   font-size: 27px;
 `;
