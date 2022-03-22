@@ -9,6 +9,7 @@ import OpenBoardPage from './OpenBoardPage';
 import WriteReviewPage from './WriteReviewPage';
 import BookInfoPage from "./BookInfoPage";
 import PersonalPage from './PersonalPage';
+import NotFoundPage from "./NotFoundPage";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -18,6 +19,7 @@ ReactDOM.render(
       <Route path="/writeReview" element={<WriteReviewPage />} />
       <Route path="/bookInfo" element={<BookInfoPage />} />
       <Route path="/personalPage" element={<PersonalPage />} />
+      <Route path='*' element={<NotFoundPage />}/>
     </Routes>
   </BrowserRouter>,
   document.getElementById('root'),
