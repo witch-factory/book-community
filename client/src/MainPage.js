@@ -6,7 +6,7 @@ import book3 from './image/book3.jpg';
 import book4 from './image/book4.jpg';
 import book5 from './image/book5.jpg';
 import SlideMenu from './common/SlideMenu';
-import SearchBox from './common/SearchBox';
+import MainPageSearchBox from './common/MainPageSearchBox';
 import VerticalContainer from './common/VerticalContainer';
 import SmallGroupSummary from './SmallGroupSummary';
 import PageFooter from './common/PageFooter';
@@ -27,7 +27,7 @@ function MainPage() {
 
       <PageHeader />
 
-      <SearchBox
+      <MainPageSearchBox
         mainPhrase="원하는 것을 검색해 보세요
         책, 서평, 소모임, 책에 관련된 모든 것이 있답니다"
         subPhrase="원하는 게 딱히 없다면 추천해 드릴 수도 있어요!"
