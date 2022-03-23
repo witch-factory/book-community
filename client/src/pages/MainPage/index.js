@@ -1,15 +1,15 @@
 import React from 'react';
-import PageHeader from './common/PageHeader';
-import book1 from './image/book1.jpg';
-import book2 from './image/book2.jpg';
-import book3 from './image/book3.jpg';
-import book4 from './image/book4.jpg';
-import book5 from './image/book5.jpg';
-import SlideMenu from './common/SlideMenu';
-import MainPageSearchBox from './common/MainPageSearchBox';
-import VerticalContainer from './common/VerticalContainer';
-import SmallGroupSummary from './SmallGroupSummary';
-import PageFooter from './common/PageFooter';
+import book1 from '../../image/book1.jpg';
+import book2 from '../../image/book2.jpg';
+import book3 from '../../image/book3.jpg';
+import book4 from '../../image/book4.jpg';
+import book5 from '../../image/book5.jpg';
+import {
+  SlideMenu,
+  MainPageSearchBox,
+  SmallGroupSummary }
+  from './styles';
+import CommonPageLayout from '../../layout/CommonPageLayout';
 
 const slideMenuImageList = [book1, book2, book3, book4, book5];
 
@@ -22,11 +22,7 @@ const smallGroupTitleList = [
 
 function MainPage() {
   return (
-
-    <VerticalContainer>
-
-      <PageHeader />
-
+    <CommonPageLayout>
       <MainPageSearchBox
         mainPhrase="원하는 것을 검색해 보세요
         책, 서평, 소모임, 책에 관련된 모든 것이 있답니다"
@@ -34,9 +30,7 @@ function MainPage() {
       />
       <SlideMenu slideMenuImages={slideMenuImageList} />
       <SmallGroupSummary TitleList={smallGroupTitleList} />
-
-      <PageFooter />
-    </VerticalContainer>
+    </CommonPageLayout>
 
   );
 }

@@ -8,6 +8,7 @@ module.exports= {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/prop-types":"off",
     "react/react-in-jsx-scope":"off",
+    "import/prefer-default-export":"off",
   },
   "extends": ['airbnb'],
 };
