@@ -42,7 +42,7 @@ function SearchBoxSearchButton() {
 
 function SearchBox() {
   return (
-    <SearchBoxContainer>
+    <SearchBoxContainer style={{ marginTop: '40px' }}>
       <SearchTextBox placeholder="검색하기" />
       <SearchBoxSearchButton />
     </SearchBoxContainer>

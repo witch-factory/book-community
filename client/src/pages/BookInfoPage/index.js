@@ -15,7 +15,7 @@ function BookCoverImage({ coverImg }) {
 function BookInfoBox({ bookTitle, coverImg, bookStarRate = 3 }) {
   return (
     <VerticalContainer>
-      <HorizontalContainer>
+      <HorizontalContainer style={{ marginTop: '60px' }}>
         <BookCoverImage coverImg={coverImg} />
         <VerticalContainer>
           <h1>{bookTitle}</h1>

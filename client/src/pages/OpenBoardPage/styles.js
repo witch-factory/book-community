@@ -18,13 +18,16 @@ export const Container = styled.div`
   width: 1100px;
   margin: 1rem;
   height: 50vh;
-  background-color: skyblue;
+  background-color: lightyellow;
+  margin-top: 70px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
 `;
 
 export const Table = styled.div`
   width: 1100px;
   margin: 0;
-  background-color: pink;
+  background-color: white;
 `;
 
 export const TableHead = styled.div`
@@ -33,7 +36,8 @@ export const TableHead = styled.div`
   & div {
     margin-right: 150px;
     margin-left: 10px;
-    font-size: 20px;
+    font-size: 17px;
+    height: 28px;
   }
 `;
 
@@ -57,11 +61,12 @@ export const Bottom = styled.div`
   & button {
     width: 100px;
     background-color: white;
-    border: 3px solid gray;
+    border: 2px solid gray;
     border-radius: 20px;
     padding: 6px;
-    font-size: 20px;
+    font-size: 17px;
     color: gray;
+    height: 40px;
   }
 
   & button:hover {

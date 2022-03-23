@@ -33,21 +33,25 @@ const thirdMenuDropDown = [
 ];
 
 const MyPage = styled.div`
-  background-color: #9787f8;
-  color: white;
-  border-radius: 50px;
+  
   margin-left: auto;
   margin-right: 70px;
-  padding: 1rem;
+  min-width: 110px;
+  height: 30px;
+  border-radius: 100px;
+  background-color: white;
+  border: 2px solid slateblue;
+  font-weight: bold;
+  font-size: 17px;
+  color: slateblue;
+  margin-top: 15px;
   text-align: center;
-  font-weight: 500;
-  font-size: 1.3rem;
-  height:1.8rem;
-  min-width:8rem;
-  max-width: 100%;
+  padding-top: 8px;
+  
   
   :hover {
-    color: lightyellow;
+    background-color: slateblue;
+    color: white;
   }
 `;
 

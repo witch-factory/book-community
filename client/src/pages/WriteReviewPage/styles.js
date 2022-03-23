@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Title = styled.h1`
     margin: 0px 0px 5px 0px;
     width: 100%;
-    height: 7vh;
+    height: 8vh;
     text-align: center;
     background-color: slateblue;
     color: white;
@@ -19,14 +19,15 @@ export const Wrap = styled.div`
     flex-direction: column;
 
     & .title {
+        outline: none;
         width: 40%;
         height: 8%;
         border-radius: 20px;
         postion: absolute;
         margin-left: 30%;
         font-size: 20px;
-        background-color: lightyellow;
-        border: 3px solid skyblue;
+        // background-color: lightyellow;
+        border: 3px solid lightgray;
     }
 
     & .title:hover {
@@ -40,12 +41,13 @@ export const Wrap = styled.div`
         postion: absolute;
         margin-left: 10%;
         font-size: 18px;
-        border: 4px solid yellowgreen;
-        background-color: lightyellow;
+        border: 3px solid lightyellow;
+        outline: none;
+        // background-color: lightyellow;
     }
 
     & .content:hover {
-      background-color: white;
+      background-color: lightyellow;
       outline: none;
     }
 `;
@@ -70,7 +72,7 @@ export const ButtonWrap = styled.div`
 export const Button = styled.button`
     width: 100px;
     background-color: gray;
-    border: 3px solid gray;
+    border: 2px solid gray;
     border-radius: 20px;
     padding: 6px;
     font-size: 20px;
