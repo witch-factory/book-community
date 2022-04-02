@@ -5,30 +5,37 @@ export const TopBar = styled.div`
 
   & .setting {
     position: absolute;
-    right: 128px;
-    top: 17px;
+    right: 140px;
+    top: 24px;
   }
 
   & .WriteButton {
-    width: 70px;
-    height: 30px;
+    width: 80px;
+    height: 40px;
     border-radius: 100px;
     background-color: white;
     border: 2px solid slateblue;
     font-weight: bold;
+    font-size: 16px;
     color: slateblue;
-    margin-top: 15px;
+    margin-top: 22px;
     position: absolute;
-    right: 40px;
+    right: 50px;
     text-align: center;
-    padding-top: 8px;
 
+  }
+
+  & .WriteButton:hover {
+    color: white;
+    border: 2px solid gray;
+    background-color: slateblue;
   }
 `;
 
 export const LogoContainer = styled.div`
   width: 300px;
-  height: 70px;
+  height: 10vh
+  margin-bottom:1rem;
 `;
 
 export const BgImageContainer = styled.img`
@@ -51,7 +58,7 @@ export const ProfileImage = styled.img`
   margin-left: 45%;
   width: 140px;
   height: 140px;
-  background-color: pink;
+  background-color: lightyellow;
   position: absolute;
   border-radius: 500px;
 `;
@@ -132,6 +139,7 @@ export const ContentIntro = styled.div`
   margin: auto;
   
   margin-top: 20px;
+  margin-bottom: 40px;
 
   & .writing {
     width: 200px;
@@ -159,7 +167,7 @@ export const ContentArea = styled.div`
 `;
 
 export const ContentContainer = styled.div`
-  width: 90%;
+  width: 92%;
   height: 1200px;
   // background-color: green;
   margin: auto;
@@ -168,15 +176,15 @@ export const ContentContainer = styled.div`
 
 export const Content = styled.div`
   height: 220px;
-  border: 2px solid gray;
+  border: 2px solid lightgray;
   border-radius: 10px;
-  background-color: pink;
+  background-color: lightyellow;
   display: flex;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 `;
 
-export const BookContent = styled.div`
+export const BookContent = styled.img`
   width: 160px;
   height: 90%;
   background-color: white;
@@ -185,18 +193,21 @@ export const BookContent = styled.div`
 
 export const BookInfo = styled.div`
   align-items: row;
-  margin: 10px 0 10px 10px;
+  margin: 10px 0 10px 18px;
   // background-color: yellow;
   width: 81%;
 `;
 
 export const BookTitleLine = styled.div`
   display: flex;
+  font-size: 16px;
+  margin-top: 10px;
 `;
 
 export const SummaryContent = styled.div`
   width: 100%;
-  height: 80%;
-  background-color: slateblue;
+  height: 70%;
+  background-color: white;
   margin-top: 15px;
+  border-radius: 10px;
 `;

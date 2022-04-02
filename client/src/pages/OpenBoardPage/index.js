@@ -41,56 +41,58 @@ function OpenBoardPage() {
   const navigate = useNavigate();
   return (
     <CommonPageLayout>
-      <PageTitle>
-        <h1>자유게시판</h1>
-        <p>자유롭게 글을 쓸 수 있는 공간입니다.</p>
-      </PageTitle>
+      <div style={{ margin: 'auto' }}>
+        <PageTitle>
+          <h1>자유게시판</h1>
+          <p>자유롭게 글을 쓸 수 있는 공간입니다.</p>
+        </PageTitle>
 
-      <Container>
-        <Table>
-          <TableHead>
-            <div>NO.</div>
-            <div>글제목</div>
-            <div>작성자</div>
-            <div>조회수</div>
-            <div>작성일</div>
-          </TableHead>
-        </Table>
+        <Container>
+          <Table>
+            <TableHead>
+              <div>NO.</div>
+              <div>글제목</div>
+              <div>작성자</div>
+              <div>조회수</div>
+              <div>작성일</div>
+            </TableHead>
+          </Table>
 
-        {posts.map((post) => (
-          <Post
-            key={post.id}
-            id={post.id}
-            title={post.title}
-            author={post.author}
-            views={post.views}
-            date={post.date}
-          />
-        ))}
-      </Container>
+          {posts.map((post) => (
+            <Post
+              key={post.id}
+              id={post.id}
+              title={post.title}
+              author={post.author}
+              views={post.views}
+              date={post.date}
+            />
+          ))}
+        </Container>
 
-      <Bottom>
-        <UnorderedList>
-          <li>
-            <Link to="/openBoard">1</Link>
-          </li>
-          <li>
-            <Link to="/openBoard">2</Link>
-          </li>
-          <li>
-            <Link to="/openBoard">3</Link>
-          </li>
-        </UnorderedList>
+        <Bottom>
+          <UnorderedList>
+            <li>
+              <Link to="/openBoard">1</Link>
+            </li>
+            <li>
+              <Link to="/openBoard">2</Link>
+            </li>
+            <li>
+              <Link to="/openBoard">3</Link>
+            </li>
+          </UnorderedList>
 
-        <button
-          type="button"
-          onClick={() => {
-            navigate('/writeReview');
-          }}
-        >
-          글쓰기
-        </button>
-      </Bottom>
+          <button
+            type="button"
+            onClick={() => {
+              navigate('/writeReview');
+            }}
+          >
+            글쓰기
+          </button>
+        </Bottom>
+      </div>
     </CommonPageLayout>
   );
 }

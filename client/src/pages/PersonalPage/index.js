@@ -1,8 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AiFillSetting } from 'react-icons/ai';
 import HeaderLogo from '../../common/HeaderLogo';
 import background from '../../image/background.jpg';
 import cat from '../../image/cat.JPG';
+import carrot from '../../image/carrot.jpg';
+
 import {
   TopBar,
   LogoContainer,
@@ -25,6 +28,8 @@ import {
   from './styles';
 
 function PersonalPage() {
+  const navigate = useNavigate();
+
   return (
     <>
       <TopBar>
@@ -32,7 +37,7 @@ function PersonalPage() {
           <HeaderLogo />
         </LogoContainer>
         <AiFillSetting className="setting" size="35" color="slateblue" />
-        <div className="WriteButton">글쓰기</div>
+        <button type="button" className="WriteButton" onClick={() => { navigate('/writeReview'); }}>글쓰기</button>
       </TopBar>
 
       <ProfileContainer>
@@ -58,11 +63,11 @@ function PersonalPage() {
         <ContentContainer>
 
           <Content>
-            <BookContent />
+            <BookContent src={carrot} alt="bookImage" />
             <BookInfo>
 
               <BookTitleLine>
-                <div>이상한나라의 앨리스</div>
+                <div>당근 유치원</div>
                 <div>| ★★★★★ 5.0</div>
               </BookTitleLine>
 
