@@ -61,7 +61,7 @@ export const ButtonWrap = styled.div`
   margin-left: 10%;
   margin-top: 30px;
   .backButton:hover {
-    background-color: #9787f8;
+    background-color: rgb(189 167 232);
   }
   .inputButton {
     margin-left: 34%;

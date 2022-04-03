@@ -10,7 +10,7 @@ const PageHeaderContainer = styled.div`
   align-items: center;
   width: 100%;
   margin:0;
-  height:10vh;
+  height: 10vh;
   // background-color:green;
 `;
 

@@ -12,6 +12,7 @@ const HeaderLogoContainer = styled.div`
 
 const HeaderMainLogo = styled.h1`
   font-size:2.5rem;
+  font-weight: bold;
   margin: 3px;
   color: slateblue;
 `;
