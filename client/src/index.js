@@ -10,6 +10,8 @@ import WriteReviewPage from './pages/WriteReviewPage';
 import BookInfoPage from "./pages/BookInfoPage";
 import PersonalPage from './pages/PersonalPage';
 import NotFoundPage from "./pages/NotFoundPage";
+import LoginPage from './pages/LoginPage';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -20,6 +22,7 @@ ReactDOM.render(
       <Route path="/bookInfo" element={<BookInfoPage />} />
       <Route path="/personalPage" element={<PersonalPage />} />
       <Route path='*' element={<NotFoundPage />}/>
+      <Route path="/login" element={<LoginPage />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById('root'),
