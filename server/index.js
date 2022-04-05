@@ -1,10 +1,19 @@
 import express from 'express';
+import DBConnection from './db.js';
 
 const app = express();
 const port = 8000;
 
-app.get('/', (req, res) => {
-  res.send('hello world');
+app.get('/', async (req, res) => {
+  const pool = DBConnection();
+  const conn = await pool.getConnection();
+
+  try {
+    const [rows] = await conn.query('select * from free_board');
+    res.send(rows);
+  } finally {
+    conn.release();
+  }
 });
 
 app.listen(port, () => {
